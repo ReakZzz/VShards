@@ -3,19 +3,6 @@
 
 A lightweight, UUID-based virtual currency plugin with a GUI shop, leaderboard, PlaceholderAPI support, and a fully configurable MiniMessage interface.
 
----
-
-## Installation
-
-1. Drop `V-Shards-1.0.0.jar` into your `plugins/` folder.
-2. Restart the server — `config.yml`, `shop.yml`, and `data.yml` generate automatically.
-3. *(Optional)* Install [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/) for placeholder support.
-
-> **Upgrading from a previous build?**  
-> Delete your old `config.yml` before restarting. `saveDefaultConfig()` never overwrites an existing file, so stale configs will persist until manually removed.
-
----
-
 ## Commands
 
 | Command | Permission | Description |
