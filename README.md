@@ -1,18 +1,7 @@
 # V-Shards
 
-**Version:** 1.0.0 &nbsp;|&nbsp; **Author:** reakkz &nbsp;|&nbsp; **API:** Paper 1.21.1
 
 A lightweight, UUID-based virtual currency plugin with a GUI shop, leaderboard, PlaceholderAPI support, and a fully configurable MiniMessage interface.
-
----
-
-## Requirements
-
-| Requirement | Version |
-|---|---|
-| Server | Paper 1.21.1+ |
-| Java | 21+ |
-| PlaceholderAPI | 2.11.6+ *(optional)* |
 
 ---
 
@@ -221,61 +210,3 @@ Only modified balances are written on each auto-save cycle *(dirty-tracking)* �
 
 ---
 
-## Building from Source
-
-```bash
-git clone <repo>
-cd vshards
-mvn clean package
-```
-
-The shaded jar outputs to `target/V-Shards-1.0.0.jar`.
-
-**Dependencies pulled automatically by Maven:**
-
-| Dependency | Scope |
-|---|---|
-| `io.papermc.paper:paper-api:1.21.1-R0.1-SNAPSHOT` | provided |
-| `me.clip:placeholderapi:2.11.6` | provided (optional) |
-
----
-
-## Project Structure
-
-```
-src/main/
-├── java/dev/reakkz/vshards/
-│   ├── VShards.java                     Main plugin class
-│   ├── commands/
-│   │   └── ShardsCommand.java           All /shards subcommands + tab completion
-│   ├── listeners/
-│   │   └── ShopListener.java            GUI click / drag / close events
-│   ├── managers/
-│   │   ├── ShardsManager.java           In-memory balance store
-│   │   └── DataManager.java             YAML persistence (dirty-tracking)
-│   ├── placeholders/
-│   │   └── ShardsPlaceholder.java       PlaceholderAPI expansion
-│   ├── shop/
-│   │   ├── ShopGUI.java                 Inventory builder + transaction logic
-│   │   ├── ShopItem.java                Immutable item data model
-│   │   └── ShopManager.java            shop.yml loader + parser
-│   ├── tasks/
-│   │   └── AutoSaveTask.java            Async periodic dirty-save
-│   └── utils/
-│       ├── MessageUtil.java             MiniMessage parser + send helpers
-│       └── NumberUtil.java              K / M / B number formatter
-└── resources/
-    ├── plugin.yml
-    ├── config.yml
-    └── shop.yml
-```
-
----
-
-## Planned Features
-
-- MySQL storage backend
-- Vault economy integration hooks
-- Transaction logging
-- Per-item purchase limits
-- Multi-page shop support
