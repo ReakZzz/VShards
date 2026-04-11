@@ -1,0 +1,170 @@
+# =============================================
+#         V-Shards — Shop Configuration
+#         Version: 1.0.0 | Author: reakkz
+# =============================================
+# Supports & legacy color codes in display_name, lore, and menu_title.
+#
+# Item types:
+#   buy   — deducts shards, gives item (or runs commands)
+#   sell  — takes item from inventory, gives shards
+#   close — closes the GUI
+#
+# Optional command fields (buy / sell):
+#   command-console: runs as CONSOLE, supports %player%
+#   command-player:  runs as the PLAYER
+#   If commands are defined, no item is given/taken — commands handle the reward.
+#   Set amount: 0 when using commands.
+# =============================================
+
+menu_title: '&dꜱʜᴀʀᴅꜱ ꜱʜᴏᴘ'
+size: 54  # Must be a multiple of 9 (9–54)
+
+items:
+
+  # ── Decorative border ──────────────────────────────────────────────────────
+  border_top_1:
+    material: GRAY_STAINED_GLASS_PANE
+    slot: 0
+    type: decoration
+    display_name: '&r'
+    lore: []
+
+  border_top_2:
+    material: GRAY_STAINED_GLASS_PANE
+    slot: 1
+    type: decoration
+    display_name: '&r'
+    lore: []
+
+  border_top_3:
+    material: GRAY_STAINED_GLASS_PANE
+    slot: 2
+    type: decoration
+    display_name: '&r'
+    lore: []
+
+  border_top_4:
+    material: GRAY_STAINED_GLASS_PANE
+    slot: 3
+    type: decoration
+    display_name: '&r'
+    lore: []
+
+  border_top_5:
+    material: GRAY_STAINED_GLASS_PANE
+    slot: 4
+    type: decoration
+    display_name: '&r'
+    lore: []
+
+  border_top_6:
+    material: GRAY_STAINED_GLASS_PANE
+    slot: 5
+    type: decoration
+    display_name: '&r'
+    lore: []
+
+  border_top_7:
+    material: GRAY_STAINED_GLASS_PANE
+    slot: 6
+    type: decoration
+    display_name: '&r'
+    lore: []
+
+  border_top_8:
+    material: GRAY_STAINED_GLASS_PANE
+    slot: 7
+    type: decoration
+    display_name: '&r'
+    lore: []
+
+  border_top_9:
+    material: GRAY_STAINED_GLASS_PANE
+    slot: 8
+    type: decoration
+    display_name: '&r'
+    lore: []
+
+  # ── Shop items ─────────────────────────────────────────────────────────────
+  pig_spawner_buy:
+    material: SPAWNER
+    slot: 10
+    type: buy
+    price: 5000
+    amount: 1
+    display_name: '&d&lᴘɪɢ ꜱᴘᴀᴡɴᴇʀ'
+    lore:
+      - '&8&m                    '
+      - '&l&8| &f1x ᴘɪɢ ꜱᴘᴀᴡɴᴇʀ'
+      - '&l&8| &7ᴄᴏꜱᴛ: &d5,000 ꜱʜᴀʀᴅꜱ'
+      - '&8&m                    '
+      - '&l&8| &7ᴄʟɪᴄᴋ ᴛᴏ ʙᴜʏ!'
+
+  pig_spawner_sell:
+    material: SPAWNER
+    slot: 11
+    type: sell
+    price: 2500
+    amount: 1
+    display_name: '&c&lꜱᴇʟʟ ᴘɪɢ ꜱᴘᴀᴡɴᴇʀ'
+    lore:
+      - '&8&m                    '
+      - '&l&8| &f1x ᴘɪɢ ꜱᴘᴀᴡɴᴇʀ'
+      - '&l&8| &7ᴇᴀʀɴ: &62,500 ꜱʜᴀʀᴅꜱ'
+      - '&8&m                    '
+      - '&l&8| &7ᴄʟɪᴄᴋ ᴛᴏ ꜱᴇʟʟ!'
+
+  diamond_buy:
+    material: DIAMOND
+    slot: 13
+    type: buy
+    price: 300
+    amount: 1
+    display_name: '&b&lᴅɪᴀᴍᴏɴᴅ'
+    lore:
+      - '&8&m                    '
+      - '&l&8| &f1x ᴅɪᴀᴍᴏɴᴅ'
+      - '&l&8| &7ᴄᴏꜱᴛ: &b300 ꜱʜᴀʀᴅꜱ'
+      - '&8&m                    '
+      - '&l&8| &7ᴄʟɪᴄᴋ ᴛᴏ ʙᴜʏ!'
+
+  diamond_sell:
+    material: DIAMOND
+    slot: 14
+    type: sell
+    price: 150
+    amount: 1
+    display_name: '&c&lꜱᴇʟʟ ᴅɪᴀᴍᴏɴᴅ'
+    lore:
+      - '&8&m                    '
+      - '&l&8| &f1x ᴅɪᴀᴍᴏɴᴅ'
+      - '&l&8| &7ᴇᴀʀɴ: &6150 ꜱʜᴀʀᴅꜱ'
+      - '&8&m                    '
+      - '&l&8| &7ᴄʟɪᴄᴋ ᴛᴏ ꜱᴇʟʟ!'
+
+  # ── Example command-based buy (no item given — command does it) ────────────
+  # vip_rank:
+  #   material: NETHER_STAR
+  #   slot: 16
+  #   type: buy
+  #   price: 50000
+  #   amount: 0
+  #   command-console:
+  #     - 'lp user %player% parent set vip'
+  #   command-player:
+  #     - 'me just bought VIP!'
+  #   display_name: '&6&lᴠɪᴘ ʀᴀɴᴋ'
+  #   lore:
+  #     - '&8&m                    '
+  #     - '&l&8| &7ᴄᴏꜱᴛ: &650,000 ꜱʜᴀʀᴅꜱ'
+  #     - '&8&m                    '
+  #     - '&l&8| &7ᴄʟɪᴄᴋ ᴛᴏ ʙᴜʏ!'
+
+  # ── Bottom bar ─────────────────────────────────────────────────────────────
+  close:
+    material: RED_STAINED_GLASS_PANE
+    slot: 49
+    type: close
+    display_name: '&c&lᴄʟᴏꜱᴇ'
+    lore:
+      - '&7ᴄʟɪᴄᴋ ᴛᴏ ᴄʟᴏꜱᴇ.'

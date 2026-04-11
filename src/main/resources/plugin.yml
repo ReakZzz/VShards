@@ -1,0 +1,58 @@
+name: V-Shards
+version: ${project.version}
+main: dev.reakkz.vshards.VShards
+api-version: '1.21'
+author: reakkz
+description: A modern UUID-based virtual currency plugin.
+softdepend:
+  - PlaceholderAPI
+
+commands:
+  shards:
+    description: Main V-Shards command.
+    usage: /shards [player|give|take|set|top|reload]
+    aliases:
+      - vs
+      - vshards
+
+permissions:
+  vshards.balance:
+    description: Check your own shard balance.
+    default: true
+
+  vshards.balance.others:
+    description: Check another player's shard balance.
+    default: op
+
+  vshards.top:
+    description: View the shard leaderboard.
+    default: true
+
+  vshards.shop:
+    description: Open the Shards Shop GUI.
+    default: true
+
+  vshards.admin.give:
+    description: Give shards to a player.
+    default: op
+
+  vshards.admin.take:
+    description: Remove shards from a player.
+    default: op
+
+  vshards.admin.set:
+    description: Set a player's exact shard balance.
+    default: op
+
+  vshards.admin.reload:
+    description: Reload V-Shards configuration files.
+    default: op
+
+  vshards.admin.*:
+    description: All V-Shards admin permissions.
+    default: op
+    children:
+      vshards.admin.give: true
+      vshards.admin.take: true
+      vshards.admin.set: true
+      vshards.admin.reload: true

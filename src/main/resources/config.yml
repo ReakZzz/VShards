@@ -1,0 +1,75 @@
+# =============================================
+#         V-Shards Configuration
+#         Version: 1.0.0 | Author: reakkz
+# =============================================
+
+# Storage Settings
+storage:
+  type: YAML
+  auto-save-interval: 300
+
+# Currency Settings
+currency:
+  name: "<gold>ꜱʜᴀʀᴅꜱ</gold>"
+  name-singular: "<gold>ꜱʜᴀʀᴅ</gold>"
+  starting-balance: 0
+  max-balance: -1
+
+# Leaderboard Settings
+leaderboard:
+  entries-per-page: 10
+
+# =============================================
+# Shop Settings
+# =============================================
+shards_shop:
+  # Enable or disable the shop entirely
+  enabled: true
+  # Command players use to open the shop directly (in addition to /shards shop)
+  # Set to '' to disable the alias
+  open-command: 'shop'
+  # Prevent players from moving items inside the shop GUI
+  lock-gui: true
+
+# =============================================
+# Message Configuration — MiniMessage format
+# https://docs.advntr.dev/minimessage/format.html
+# =============================================
+messages:
+  prefix: "<gray>[<gradient:#55FFFF:#5555FF>ᴠ-ꜱʜᴀʀᴅꜱ</gradient>]</gray> "
+
+  # Balance
+  balance-self: "<gray>ʏᴏᴜ ʜᴀᴠᴇ <gold>%amount% ꜱʜᴀʀᴅꜱ</gold>.</gray>"
+  balance-other: "<gradient:#55FFFF:#5555FF>%player%</gradient> <gray>ʜᴀꜱ <gold>%amount% ꜱʜᴀʀᴅꜱ</gold>.</gray>"
+
+  # Admin — give / take / set
+  give-success: "<gray>ʏᴏᴜ ɢᴀᴠᴇ <gold>%amount% ꜱʜᴀʀᴅꜱ</gold> ᴛᴏ <white>%player%</white>.</gray>"
+  give-received: "<gray><white>%sender%</white> ɢᴀᴠᴇ ʏᴏᴜ <gold>%amount% ꜱʜᴀʀᴅꜱ</gold>.</gray>"
+  take-success: "<gray>ʏᴏᴜ ʀᴇᴍᴏᴠᴇᴅ <gold>%amount% ꜱʜᴀʀᴅꜱ</gold> ꜰʀᴏᴍ <white>%player%</white>.</gray>"
+  take-received: "<gray><white>%sender%</white> ʀᴇᴍᴏᴠᴇᴅ <gold>%amount% ꜱʜᴀʀᴅꜱ</gold> ꜰʀᴏᴍ ʏᴏᴜ.</gray>"
+  set-success: "<gray>ʏᴏᴜ ꜱᴇᴛ <white>%player%</white>'ꜱ ʙᴀʟᴀɴᴄᴇ ᴛᴏ <gold>%amount% ꜱʜᴀʀᴅꜱ</gold>.</gray>"
+  set-received: "<gray>ʏᴏᴜʀ ꜱʜᴀʀᴅ ʙᴀʟᴀɴᴄᴇ ᴡᴀꜱ ꜱᴇᴛ ᴛᴏ <gold>%amount%</gold>.</gray>"
+  reload-success: "<green>ᴄᴏɴꜰɪɢᴜʀᴀᴛɪᴏɴ ʀᴇʟᴏᴀᴅᴇᴅ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ.</green>"
+
+  # Shop
+  shop-disabled: "<red>ᴛʜᴇ ꜱʜᴏᴘ ɪꜱ ᴄᴜʀʀᴇɴᴛʟʏ ᴅɪꜱᴀʙʟᴇᴅ.</red>"
+  shop-buy-success: "<gray>ʏᴏᴜ ʙᴏᴜɢʜᴛ <white>%item%</white> ꜰᴏʀ <gold>%price% ꜱʜᴀʀᴅꜱ</gold>.</gray>"
+  shop-sell-success: "<gray>ʏᴏᴜ ꜱᴏʟᴅ <white>%item%</white> ꜰᴏʀ <gold>%price% ꜱʜᴀʀᴅꜱ</gold>.</gray>"
+  shop-insufficient-shards: "<red>ʏᴏᴜ ᴅᴏ ɴᴏᴛ ʜᴀᴠᴇ ᴇɴᴏᴜɢʜ ꜱʜᴀʀᴅꜱ.</red>"
+  shop-insufficient-items: "<red>ʏᴏᴜ ᴅᴏ ɴᴏᴛ ʜᴀᴠᴇ <white>%amount%x %item%</white> ɪɴ ʏᴏᴜʀ ɪɴᴠᴇɴᴛᴏʀʏ.</red>"
+  shop-inventory-full: "<red>ʏᴏᴜʀ ɪɴᴠᴇɴᴛᴏʀʏ ɪꜱ ꜰᴜʟʟ.</red>"
+
+  # Leaderboard
+  leaderboard-header: "<gray>[<gradient:#55FFFF:#5555FF>ꜱʜᴀʀᴅ ʟᴇᴀᴅᴇʀʙᴏᴀʀᴅ</gradient>]</gray> <dark_gray>ᴘᴀɢᴇ <white>%page%</white>/<white>%maxpage%</white>"
+  leaderboard-entry: " <dark_gray>%rank%.</dark_gray> <gradient:#55FFFF:#5555FF>%player%</gradient> <dark_gray>—</dark_gray> <gold>%amount%</gold> <gray>ꜱʜᴀʀᴅꜱ</gray>"
+  leaderboard-footer: "<dark_gray><st>                                        </st></dark_gray>"
+  leaderboard-empty: "<gray>ɴᴏ ᴇɴᴛʀɪᴇꜱ ꜰᴏᴜɴᴅ ᴏɴ ᴛʜɪꜱ ᴘᴀɢᴇ.</gray>"
+
+  # Errors
+  error-player-not-found: "<red>ᴘʟᴀʏᴇʀ <white>%player%</white> ᴄᴏᴜʟᴅ ɴᴏᴛ ʙᴇ ꜰᴏᴜɴᴅ.</red>"
+  error-invalid-amount: "<red>ɪɴᴠᴀʟɪᴅ ᴀᴍᴏᴜɴᴛ. ᴘʟᴇᴀꜱᴇ ᴇɴᴛᴇʀ ᴀ ᴘᴏꜱɪᴛɪᴠᴇ ɴᴜᴍʙᴇʀ.</red>"
+  error-insufficient-funds: "<red>ᴛʜᴀᴛ ᴘʟᴀʏᴇʀ ᴅᴏᴇꜱ ɴᴏᴛ ʜᴀᴠᴇ ᴇɴᴏᴜɢʜ ꜱʜᴀʀᴅꜱ.</red>"
+  error-no-permission: "<red>ʏᴏᴜ ᴅᴏ ɴᴏᴛ ʜᴀᴠᴇ ᴘᴇʀᴍɪꜱꜱɪᴏɴ ᴛᴏ ᴅᴏ ᴛʜᴀᴛ.</red>"
+  error-usage: "<red>ᴜꜱᴀɢᴇ: <white>%usage%</white></red>"
+  error-player-only: "<red>ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ᴄᴀɴ ᴏɴʟʏ ʙᴇ ʀᴜɴ ʙʏ ᴀ ᴘʟᴀʏᴇʀ.</red>"
+  error-invalid-page: "<red>ɪɴᴠᴀʟɪᴅ ᴘᴀɢᴇ ɴᴜᴍʙᴇʀ.</red>"
